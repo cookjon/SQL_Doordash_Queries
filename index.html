@@ -32,6 +32,7 @@
         View matching SQL queries in the GitHub <a href="https://github.com/cookjon/SQL_Doordash_Analysis/blob/main/Doordash_store_queries.sql" target="_blank">repo here</a>.
     </p>
     <div class='dashboard-container'>
+        <!-- First Tableau Dashboard -->
         <div class='tableauPlaceholder' id='viz1741901997049' style='position: relative'>
             <noscript>
                 <a href='#'>
@@ -55,24 +56,9 @@
                 <param name='filter' value='publish=yes' />
             </object>
         </div>
-        <script type='text/javascript'>
-            var divElement = document.getElementById('viz1741901997049');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width = '1300px';
-                vizElement.style.height = '927px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width = '1300px';
-                vizElement.style.height = '927px';
-            } else {
-                vizElement.style.width = '100%';
-                vizElement.style.height = '1327px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-        <div class='tableauPlaceholder' id='viz1742501020193' style='position: relative'>
+
+        <!-- Second Tableau Dashboard -->
+        <div class='tableauPlaceholder' id='viz1742501020193' style='position: relative; margin-top: 20px;'>
             <noscript>
                 <a href='#'>
                     <img alt=' ' src='https://public.tableau.com/static/images/Bo/Book2_17418832449970/DeliveryDashboard/1_rss.png' style='border: none' />
@@ -94,26 +80,33 @@
                 <param name='language' value='en-US' />
             </object>
         </div>
-        <script type='text/javascript'>
-            var divElement = document.getElementById('viz1742501020193');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width = '1300px';
-                vizElement.style.height = '950px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width = '1300px';
-                vizElement.style.height = '950px';
-            } else {
-                vizElement.style.width = '100%';
-                vizElement.style.height = '1350px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
     </div>
+
     <p class='work-link'>
         Connect with me on <a href="https://www.linkedin.com/in/jonathancook3/" target="_blank">my LinkedIn</a>.
     </p>
+
+    <!-- Tableau API Script (loaded once for both dashboards) -->
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+    <script type='text/javascript'>
+        function loadTableauViz(vizId, widthLarge, heightLarge, widthSmall, heightSmall) {
+            var divElement = document.getElementById(vizId);
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if (divElement.offsetWidth > 800) {
+                vizElement.style.width = widthLarge;
+                vizElement.style.height = heightLarge;
+            } else if (divElement.offsetWidth > 500) {
+                vizElement.style.width = widthLarge;
+                vizElement.style.height = heightLarge;
+            } else {
+                vizElement.style.width = widthSmall;
+                vizElement.style.height = heightSmall;
+            }
+        }
+
+        // Load both Tableau dashboards
+        loadTableauViz('viz1741901997049', '1300px', '927px', '100%', '1327px');
+        loadTableauViz('viz1742501020193', '1300px', '950px', '100%', '1350px');
+    </script>
 </body>
 </html>
