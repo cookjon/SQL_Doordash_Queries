@@ -29,14 +29,14 @@
 <body>
     <h1>Jonathan Cook's Analysis of DoorDash Orders (Jan - Feb 2015)</h1>
     <p class='work-link'>
-        View matching SQL queries in the GitHub <a href="https://github.com/cookjon/SQL_Doordash_Analysis/blob/main/Doordash_store_queries.sql" target="_blank">repo here</a>.
+        View matching SQL queries in my GitHub <a href="https://github.com/cookjon/SQL_Doordash_Analysis/blob/main/Doordash_store_queries.sql" target="_blank">repo here</a>.
     </p>
     <div class='dashboard-container'>
-        <!-- First Tableau Dashboard -->
-        <div class='tableauPlaceholder' id='viz1741901997049' style='position: relative'>
+        <!-- Embedded Tableau Dashboard -->
+        <div class='tableauPlaceholder' id='viz1742851168784' style='position: relative'>
             <noscript>
                 <a href='#'>
-                    <img alt='Sales Dashboard (Jan - Feb 2015)' src='https://public.tableau.com/static/images/Bo/Book2_17418832449970/SalesDashboard/1_rss.png' style='border: none' />
+                    <img alt='' src='https://public.tableau.com/static/images/Bo/Book2_17418832449970/SalesDashboard/1_rss.png' style='border: none' />
                 </a>
             </noscript>
             <object class='tableauViz' style='display:none;'>
@@ -44,34 +44,9 @@
                 <param name='embed_code_version' value='3' />
                 <param name='site_root' value='' />
                 <param name='name' value='Book2_17418832449970/SalesDashboard' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image' value='https://public.tableau.com/static/images/Bo/Book2_17418832449970/SalesDashboard/1.png' />
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-                <param name='language' value='en-US' />
-                <param name='filter' value='publish=yes' />
-            </object>
-        </div>
-
-        <!-- Second Tableau Dashboard -->
-        <div class='tableauPlaceholder' id='viz1742501020193' style='position: relative; margin-top: 20px;'>
-            <noscript>
-                <a href='#'>
-                    <img alt=' ' src='https://public.tableau.com/static/images/Bo/Book2_17418832449970/DeliveryDashboard/1_rss.png' style='border: none' />
-                </a>
-            </noscript>
-            <object class='tableauViz' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                <param name='embed_code_version' value='3' />
-                <param name='site_root' value='' />
-                <param name='name' value='Book2_17418832449970/DeliveryDashboard' />
                 <param name='tabs' value='yes' />
                 <param name='toolbar' value='yes' />
-                <param name='static_image' value='https://public.tableau.com/static/images/Bo/Book2_17418832449970/DeliveryDashboard/1.png' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Bo/Book2_17418832449970/SalesDashboard/1.png' />
                 <param name='animate_transition' value='yes' />
                 <param name='display_static_image' value='yes' />
                 <param name='display_spinner' value='yes' />
@@ -86,27 +61,21 @@
         Connect with me on <a href="https://www.linkedin.com/in/jonathancook3/" target="_blank">my LinkedIn</a>.
     </p>
 
-    <!-- Tableau API Script (loaded once for both dashboards) -->
+    <!-- Tableau API Script -->
     <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
     <script type='text/javascript'>
-        function loadTableauViz(vizId, widthLarge, heightLarge, widthSmall, heightSmall) {
-            var divElement = document.getElementById(vizId);
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width = widthLarge;
-                vizElement.style.height = heightLarge;
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width = widthLarge;
-                vizElement.style.height = heightLarge;
-            } else {
-                vizElement.style.width = widthSmall;
-                vizElement.style.height = heightSmall;
-            }
+        var divElement = document.getElementById('viz1742851168784');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '1300px';
+            vizElement.style.height = '950px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '1300px';
+            vizElement.style.height = '950px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1350px';
         }
-
-        // Load both Tableau dashboards
-        loadTableauViz('viz1741901997049', '1300px', '927px', '100%', '1327px');
-        loadTableauViz('viz1742501020193', '1300px', '950px', '100%', '1350px');
     </script>
 </body>
 </html>
